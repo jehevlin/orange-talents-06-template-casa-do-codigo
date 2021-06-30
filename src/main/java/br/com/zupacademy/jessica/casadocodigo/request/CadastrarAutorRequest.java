@@ -1,6 +1,7 @@
 package br.com.zupacademy.jessica.casadocodigo.request;
 
 import br.com.zupacademy.jessica.casadocodigo.model.Autor;
+import br.com.zupacademy.jessica.casadocodigo.request.validator.MustBeUnique;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -12,6 +13,7 @@ public class CadastrarAutorRequest {
 
     @NotBlank
     @Email(message = "Email é obrigatório e preicisa ser válido!")
+    @MustBeUnique(domainClass = Autor.class, fieldName = "email", message = "Email já cadastrado")
     private String email;
 
     @NotBlank (message = "Descrição é obrigatória!")
