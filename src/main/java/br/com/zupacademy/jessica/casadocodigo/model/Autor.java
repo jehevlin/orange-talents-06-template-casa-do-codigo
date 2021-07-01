@@ -34,4 +34,15 @@ public class Autor {
         this.email = email;
         this.descricao = descricao;
     }
+
+    @Deprecated
+    public Autor() { }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
 }
