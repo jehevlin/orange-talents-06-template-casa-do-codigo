@@ -41,7 +41,7 @@ public class LivroController {
         return new ResponseEntity<>(livros, HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping(value = "/{id}")
     public ResponseEntity<?> detalhe(@PathVariable("id") Long id){
         Optional<Livro> opitional = repository.findById(id);
         if (opitional.isPresent()){
