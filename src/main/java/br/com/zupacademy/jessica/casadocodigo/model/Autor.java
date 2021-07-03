@@ -45,4 +45,12 @@ public class Autor {
     public String getDescricao() {
         return descricao;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public long getId() {
+        return id;
+    }
 }

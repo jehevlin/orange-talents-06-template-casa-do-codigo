@@ -28,6 +28,7 @@ public class LivroController {
 
     @PostMapping
     public ResponseEntity<?> cadastrarLivro(@Valid @RequestBody CadastrarLivroRequest request){
+
         Livro livro = repository.save(request.toModel());
         return new ResponseEntity<>(HttpStatus.OK);
     }

@@ -1,14 +1,13 @@
 package br.com.zupacademy.jessica.casadocodigo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Estado {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NotBlank
@@ -31,5 +30,9 @@ public class Estado {
 
     public Pais getPais() {
         return pais;
+    }
+
+    public long getId() {
+        return id;
     }
 }

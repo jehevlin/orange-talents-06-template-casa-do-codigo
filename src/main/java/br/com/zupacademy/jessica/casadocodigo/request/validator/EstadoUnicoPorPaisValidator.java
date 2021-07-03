@@ -17,7 +17,7 @@ public class EstadoUnicoPorPaisValidator implements ConstraintValidator<EstadoUn
 
     public boolean isValid(CadastrarEstadoRequest estado, ConstraintValidatorContext constraintValidatorContext) {
         final String colunaEstado = "nome";
-        final String colunaPais = "nome";
+        final String colunaPais = "pais_nome";
         Query query = manager.createQuery(
                 "select 1 from " + Estado.class.getName() + " where " + colunaEstado + " = :estado and " + colunaPais + " = :pais");
         query.setParameter("estado", estado.getNome());

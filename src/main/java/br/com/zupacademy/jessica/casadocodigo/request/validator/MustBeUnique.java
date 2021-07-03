@@ -13,7 +13,7 @@ public @interface MustBeUnique {
 
     Class<?> [] groups() default {};
 
-    Class<? extends Payload>[] playload() default {};
+    Class<? extends Payload>[] payload() default {};
 
     Class<?> domainClass();
 
